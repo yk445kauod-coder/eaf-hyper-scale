@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "electron": "^41.0.2"
+  },
+  "devDependencies": {
+    "tsconfig-paths": "^4.2.0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "eaf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --loader ts-node/esm src/cli/index.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "axios": "^1.16.0",
+    "chalk": "^5.6.2",
+    "commander": "^14.0.3",
+    "ollama": "^0.6.3",
+    "playwright": "^1.59.1"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.9.36",
+    "@types/node": "^25.6.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3",
+    "wrangler": "^4.90.0"
+  }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="theme-modern">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educreate - AI Educational Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Export Libraries via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div id="loading-overlay" class="hidden">
+        <div class="spinner"></div>
+        <p>جاري توليد المحتوى...</p>
+    </div>
+
+    <div class="app-container">
+        <!-- Sidebar / Controls -->
+        <aside class="sidebar no-print">
+            <div class="brand">
+                <h1>Educreate</h1>
+                <p>مساعدك التعليمي الذكي</p>
+            </div>
+
+            <form id="generator-form">
+                <div class="form-group">
+                    <label for="topic">موضوع المحتوى (Topic)</label>
+                    <input type="text" id="topic" placeholder="مثال: الثورة الصناعية، الخلية النباتية..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="type">نوع المحتوى (Type)</label>
+                    <select id="type" required>
+                        <option value="lesson">درس تفصيلي (Lesson)</option>
+                        <option value="summary">ملخص (Summary)</option>
+                        <option value="quiz">اختبار (Quiz)</option>
+                        <option value="worksheet">ورقة عمل (Worksheet)</option>
+                        <option value="poster">ملصق تعليمي (Poster)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="language">اللغة (Language)</label>
+                    <select id="language" required>
+                        <option value="Arabic">العربية</option>
+                        <option value="English">English</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="dataset">البيانات / المنهج (Dataset Context)</label>
+                    <textarea id="dataset" placeholder="ضع النص المرجعي هنا ليعتمد عليه الذكاء الاصطناعي (اختياري)"></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary" id="generate-btn">توليد المحتوى بـ AI 🤖</button>
+            </form>
+
+            <div class="status-indicator">
+                <span id="auth-status">جارٍ الاتصال...</span>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="toolbar no-print">
+                <div class="toolbar-group">
+                    <button id="toggle-dir" class="btn-icon" title="RTL/LTR">⇆ اتجاه النص</button>
+                    <select id="theme-selector" class="theme-selector">
+                        <option value="theme-modern">Modern</option>
+                        <option value="theme-minimal">Minimal</option>
+                        <option value="theme-academic">Academic</option>
+                        <option value="theme-visual">Visual</option>
+                    </select>
+                </div>
+
+                <div class="toolbar-group">
+                    <button class="btn-secondary" onclick="window.print()">🖨️ طباعة</button>
+                    <div class="dropdown">
+                        <button class="btn-secondary">📥 تصدير</button>
+                        <div class="dropdown-content">
+                            <a href="#" id="export-pdf">PDF</a>
+                            <a href="#" id="export-docx">DOCX</a>
+                            <a href="#" id="export-txt">TXT</a>
+                            <a href="#" id="export-md">Markdown</a>
+                            <a href="#" id="export-json">JSON</a>
+                            <a href="#" id="export-png">PNG Poster</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="editor-wrapper">
+                <!-- Content Area: Editable -->
+                <div id="content-editor" class="content-editor" contenteditable="true">
+                    <h2>أهلاً بك في Educreate</h2>
+                    <p>قم بملء البيانات في القائمة الجانبية واضغط على "توليد" لإنشاء محتوى تعليمي احترافي.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Application Logic -->
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/ai-service.js"></script>
+    <script type="module" src="js/export-service.js"></script>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

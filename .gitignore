@@ -1,0 +1,14 @@
+.gemini/
+node_modules/
+dist/
+*.zip
+.env
+dashboard.html
+eaf/src/test-agent.ts
+eaf/src/build-app-test.ts
+eaf/src/comprehensive-test.ts
+educreate/js/ai-engine-fixed-v2.js
+educreate/js/ai-engine.js
+.cache/
+.npm/
+.config/

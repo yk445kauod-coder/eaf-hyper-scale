@@ -1,0 +1,1 @@
+{"version":3,"file":"TerminalTool.d.ts","sourceRoot":"","sources":["TerminalTool.ts"],"names":[],"mappings":"AAEA,OAAO,EAAE,IAAI,EAAE,cAAc,EAAE,MAAM,iBAAiB,CAAC;AAIvD,qBAAa,YAAa,SAAQ,IAAI;IAClC,UAAU,EAAE,cAAc,CAgBxB;IAEI,OAAO,CAAC,IAAI,EAAE;QAAE,OAAO,EAAE,MAAM,CAAA;KAAE,GAAG,OAAO,CAAC,MAAM,CAAC;CAQ5D"}

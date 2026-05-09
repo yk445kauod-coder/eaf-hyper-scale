@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educreate | The Future of AI Education</title>
+    <!-- Fonts: Outfit for LTR, Cairo for RTL -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800&family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+</head>
+<body>
+    <div class="app-wrapper">
+        <!-- Glassmorphism Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <h1>Educreate</h1>
+            </div>
+
+            <div class="section-title">مساحة العمل</div>
+            <nav class="history-container" style="flex: none; margin-bottom: 2rem;">
+                <div class="history-item active">
+                    <h4>مولّد الدروس الذكي</h4>
+                    <p>الواجهة الرئيسية</p>
+                </div>
+                <div class="history-item" style="opacity: 0.6;">
+                    <h4>الاختبارات التفاعلية</h4>
+                    <p>قريباً 🚀</p>
+                </div>
+            </nav>
+
+            <div class="section-title">المستندات السابقة</div>
+            <div id="history-list" class="history-container">
+                <!-- Dynamic History via JS -->
+            </div>
+
+            <div class="user-status">
+                <div id="sys-indicator" class="status-dot"></div>
+                <span id="sys-status">جاري الاتصال بالنظام...</span>
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="workspace">
+            <header class="top-bar">
+                <div class="title-area">
+                    <h2>استوديو الإبداع</h2>
+                    <p>حوّل أفكارك إلى محتوى تعليمي احترافي في ثوانٍ</p>
+                </div>
+                <select id="theme" class="theme-selector">
+                    <option value="modern">الوضع المظلم (Dark)</option>
+                    <option value="minimal">الوضع النظيف (Light)</option>
+                    <option value="academic">الوضع الأكاديمي (Print)</option>
+                </select>
+            </header>
+
+            <!-- Input Panel -->
+            <div class="glass-card">
+                <div class="input-grid">
+                    <div class="input-group full-width">
+                        <label for="topic">موضوع الدرس الأساسي <span class="required">*</span></label>
+                        <input type="text" id="topic" class="modern-input" placeholder="مثال: الذكاء الاصطناعي في الطب، تاريخ الأندلس...">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="type">نوع المحتوى</label>
+                        <select id="type" class="modern-input">
+                            <option value="lesson plan">خطة درس تفصيلية</option>
+                            <option value="summary">ملخص للطلاب</option>
+                            <option value="worksheet">ورقة عمل تدريبية</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="lang">اللغة</label>
+                        <select id="lang" class="modern-input">
+                            <option value="ar">العربية (Fusha)</option>
+                            <option value="en">English</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group full-width">
+                        <label for="dataset">بيانات السياق المرجعية (اختياري)</label>
+                        <textarea id="dataset" class="modern-input" placeholder="الصق نصوصاً، مراجع، أو أهدافاً محددة لتوجيه الذكاء الاصطناعي بدقة..."></textarea>
+                    </div>
+
+                    <button id="generate-btn" class="btn-magic">
+                        <span id="btn-text">توليد المحتوى بذكاء ⚡</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mesmerizing Loader (Hidden by default) -->
+            <div id="loader-section" class="ai-loader" style="display: none;">
+                <div class="orb-container">
+                    <div class="orb"></div>
+                    <div class="orb-core"></div>
+                </div>
+                <p>Educreate يفكر ويصمم محتواك...</p>
+            </div>
+
+            <!-- Output Panel -->
+            <div id="output-section" class="output-wrapper">
+                <div class="toolbar">
+                    <div class="save-indicator" id="save-indicator">
+                        <span class="pulse-dot"></span> متزامن مع السحابة
+                    </div>
+                    <div class="action-buttons">
+                        <button id="export-pdf" class="btn-action" title="طباعة / PDF">طباعة</button>
+                        <button id="export-txt" class="btn-action" title="تصدير نص">تصدير TXT</button>
+                        <button id="copy-btn" class="btn-action primary" title="نسخ المحتوى">نسخ</button>
+                    </div>
+                </div>
+                
+                <div class="editor-container">
+                    <div id="editor" class="content-editable theme-modern" contenteditable="true" spellcheck="false">
+                        <!-- Content injected here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Module JS -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

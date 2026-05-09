@@ -1,0 +1,17 @@
+2026-05-08 16:22:11.236 [info] 
+
+
+
+
+2026-05-08 16:22:11.264 [info] Extension host agent started.
+2026-05-08 16:22:19.419 [info] [127.0.0.1][098aa903][ManagementConnection] New connection established.
+2026-05-08 16:22:19.423 [info] [127.0.0.1][f88a1cb1][ExtensionHostConnection] New connection established.
+2026-05-08 16:22:20.647 [info] [127.0.0.1][f88a1cb1][ExtensionHostConnection] <1681> Launched Extension Host Process.
+2026-05-08 16:22:21.218 [info] [127.0.0.1][f88a1cb1][ExtensionHostConnection] <1681> [reconnection-grace-time] Extension host: read VSCODE_RECONNECTION_GRACE_TIME=10800000ms (10800s)
+
+2026-05-08 16:31:47.375 [info] [127.0.0.1][098aa903][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2026-05-08 16:32:13.963 [info] [127.0.0.1][098aa903][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2026-05-08 16:32:13.965 [info] [127.0.0.1][f88a1cb1][ExtensionHostConnection] The client has reconnected.
+2026-05-08 16:32:15.676 [info] [127.0.0.1][098aa903][ManagementConnection] The client has reconnected.
+2026-05-08 16:38:49.751 [info] [127.0.0.1][f88a1cb1][ExtensionHostConnection] The client has reconnected.
+2026-05-08 16:39:04.995 [info] [127.0.0.1][098aa903][ManagementConnection] The client has reconnected.

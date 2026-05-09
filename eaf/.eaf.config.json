@@ -1,0 +1,22 @@
+{
+    "master_model": "Egytronic_1.0",
+    "providers": {
+        "gemini": "API_KEY_HERE",
+        "cloudflare": {
+            "accountId": "ID",
+            "token": "TOKEN"
+        },
+        "ollama": {
+            "endpoint": "http://localhost:11434"
+        },
+        "groq": "API_KEY",
+        "anthropic": "API_KEY"
+    },
+    "tools": [
+        "HyperDev",
+        "FileSystem",
+        "Browser",
+        "GitHub",
+        "Bridge"
+    ]
+}

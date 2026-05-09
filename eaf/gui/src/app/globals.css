@@ -1,0 +1,21 @@
+@import "nes.css/css/nes.min.css";
+
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+}
+
+:root {
+  --background: #212529;
+  --foreground: #ffffff;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Press Start 2P", cursive;
+}
+
+.nes-container.is-dark {
+  background-color: #212529;
+}

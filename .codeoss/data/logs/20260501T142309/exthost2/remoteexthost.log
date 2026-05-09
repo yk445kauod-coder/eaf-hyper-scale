@@ -1,0 +1,5 @@
+2026-05-01 14:39:34.674 [info] Extension host with pid 1848 started
+2026-05-01 14:39:34.686 [info] Lock '/home/yk445kauod/.codeoss/data/User/workspaceStorage/-122534a9/vscode.lock': Lock acquired.
+2026-05-01 14:42:26.214 [info] Extension host terminating: received terminate message from renderer
+2026-05-01 14:42:26.216 [info] Lock '/home/yk445kauod/.codeoss/data/User/workspaceStorage/-122534a9/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+2026-05-01 14:42:26.218 [info] Extension host with pid 1848 exiting with code 0
